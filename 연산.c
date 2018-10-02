@@ -4,12 +4,15 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[])
- {int sec;
+ {int year;
+ int result;
+ 
+  printf("input :");
+  scanf("%d" , &year);
   
-  printf("input : ");
-  scanf("%d" , &sec);
+  result = (year%4 == 0 && year%100 != 0 ) || (year%400 == 0);
   
-  printf("%d sec, is %i : %i/n", sec, sec/60, sec%60);
+  printf("leap year? %d \n", result);
 
 	return 0;
 }
